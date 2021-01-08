@@ -9,11 +9,14 @@ Design a data model of the menu and/or the dishes.A dish should contain:
 - how long the guest approximately has to wait for the dish after they order
 
 Create a REST API
-- Save (Create/Update) dishes to the MongoDB
-- Load dished from the API
+- Use .Net Core C# as application language
+- Use MongoDB as data modeling and store
+- Read menu of a restaurant
+- CRUD restaurant
+- CRUD dish
 
 ## Development
-- Data modeling steps - please the [data modeling document](asset/DataModeling.md)
+- Data modeling steps - please read the [data modeling document](asset/DataModeling.md)
 - local run commands
 1. First build dishes api image:
 ```shell

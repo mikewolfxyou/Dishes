@@ -3,14 +3,14 @@ In the real world, a customer sit in the restaurant, a digital menu will be prov
 want to know dishes information before she/he go to a restaurant. Such scenario implicit a precondition, the dishes 
 are aggregated to a restaurant. 
 
-Follow the Mongo data modeling pattern, the data model should follow the application request. Therefore I assume 
-- A customer will request a menu as one scenario. 
-- The data owner of restaurant/dishes from the other side is another
+Follow the MongoDB data modeling pattern, the data model should follow the application request. Therefore I assume 
+- A customer read a menu of a restaurant as one scenario. 
+- The data owner's operation of restaurant/dishes from the other side is another
 scenario. 
 
 ## Scenario goal
+- Customer could query menu information when she/he want to have dishes information of a restaurant
 - Restaurant could insert/update/query dishes information
-- Customer could query dishes information when she/he want to have dishes information of a restaurant
 
 ## Workload
 
@@ -56,12 +56,12 @@ data, there are `51, 200` geöffnete Beherbergungsbetriebe in Germany 2019, we a
 | Query dishes by dishes id| `10,240,000` read/day<br> each read < 5 ms | no stale data |
 
 ### Entities
-For dishes themself, a simplicity all embedded model is enough, dish should be link to restaurant, when any operation base on restaurant
-the dishes number will be limited. The first relation ship between dishes and restaurant:
+For dishes themself, a simplicity all embedded model is enough, dish should be link to restaurant
+The relationship between dish and restaurant, the image also include the user role:
 ![dishes and restaurant](DishesAndRestaurant.png?raw=true)
 
  ### Patterns
-The restaurant id in dish is kind similar *Extended reference* pattern, but not really, because the model is 
+The restaurant id in dish is kind of *Extended reference* pattern, but not really, because the model is 
 every simple, the pattern in this case might even not needed. 
 
 ### Mongo db data modeling vs. MSSQL data modeling
