@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DishesApi", "DishesApi.csproj", "{86EEF81D-03C1-4072-88FF-028F7CFECA2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DishApi.Tests", "..\..\tests\DishApi.Tests\DishApi.Tests.csproj", "{9767F4BC-5F93-4A55-B968-280DCE97AA3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86EEF81D-03C1-4072-88FF-028F7CFECA2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86EEF81D-03C1-4072-88FF-028F7CFECA2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86EEF81D-03C1-4072-88FF-028F7CFECA2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86EEF81D-03C1-4072-88FF-028F7CFECA2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9767F4BC-5F93-4A55-B968-280DCE97AA3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9767F4BC-5F93-4A55-B968-280DCE97AA3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9767F4BC-5F93-4A55-B968-280DCE97AA3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9767F4BC-5F93-4A55-B968-280DCE97AA3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

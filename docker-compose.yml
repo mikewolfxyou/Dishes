@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  mongodb:
+    image: 'docker.io/bitnami/mongodb:4.4-debian-10'
+    environment:
+      - MONGODB_USERNAME=mike
+      - MONGODB_PASSWORD=weakpassword!
+      - MONGODB_DATABASE=dishes
+    ports:
+      - "27017:27017"
+    volumes:
+      - 'mongodb_data:/bitnami/mongodb'
+
+  dishes-api:
+    image: dishes:latest
+    environment:
+      ASPNETCORE_ENVIRONMENT: 'Development'
+    ports:
+      - '5000:5000'
+    expose:
+      - '5000'
+
+volumes:
+  mongodb_data:
+    driver: local

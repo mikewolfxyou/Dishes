@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "7b566423-5240-4cc7-81d2-f1184a7a456a",
+		"name": "MongoDBDishes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Restaurant",
+			"item": [
+				{
+					"name": "Get Restaurant",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Berlin New Deli\",\n    \"ShortDescription\": \"A restaurant in Berlin\",\n    \"Dishes\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/restaurant-management/restaurant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"restaurant-management",
+								"restaurant"
+							]
+						},
+						"description": "Get Restaurant, the limit is 10"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Restaurant With Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Berlin New Deli\",\n    \"ShortDescription\": \"A restaurant in Berlin\",\n    \"Dishes\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/restaurant-management/restaurant-id?restaurantid=5ff8266b770b099403a2ffb7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"restaurant-management",
+								"restaurant-id"
+							],
+							"query": [
+								{
+									"key": "restaurantid",
+									"value": "5ff8266b770b099403a2ffb7"
+								}
+							]
+						},
+						"description": "After create restaurant could use this api end point to get restaurant"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Restaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Berlin New Deli\",\n    \"ShortDescription\": \"A restaurant in Berlin\",\n    \"Dishes\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/restaurant-management/restaurant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"restaurant-management",
+								"restaurant"
+							]
+						},
+						"description": "Create Restaurant"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Restaurant",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Berlin New Deli\",\n    \"ShortDescription\": \"A restaurant in Berlin\",\n    \"Dishes\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/restaurant-management/restaurant?restaurantId=5ff8266b770b099403a2ffb7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"restaurant-management",
+								"restaurant"
+							],
+							"query": [
+								{
+									"key": "restaurantId",
+									"value": "5ff8266b770b099403a2ffb7"
+								}
+							]
+						},
+						"description": "Delete restaurant"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dish",
+			"item": [
+				{
+					"name": "Get Dishes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    \"\"\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/dish-management/dish?dishIds=5ff72fe17e430647b1724f30&dishIds=5ff736faba2396c91303aa13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dish-management",
+								"dish"
+							],
+							"query": [
+								{
+									"key": "dishIds",
+									"value": "5ff72fe17e430647b1724f30"
+								},
+								{
+									"key": "dishIds",
+									"value": "5ff736faba2396c91303aa13"
+								}
+							]
+						},
+						"description": "Get Dishes"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Dish",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    \"\"\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/dish-management/dish?dishIds=5ff72fe17e430647b1724f30&dishIds=5ff736faba2396c91303aa13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dish-management",
+								"dish"
+							],
+							"query": [
+								{
+									"key": "dishIds",
+									"value": "5ff72fe17e430647b1724f30"
+								},
+								{
+									"key": "dishIds",
+									"value": "5ff736faba2396c91303aa13"
+								}
+							]
+						},
+						"description": "Delete dish"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Dish",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Berlin New Deli\",\n    \"ShortDescription\": \"A restaurant in Berlin\",\n    \"Dishes\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/restaurant-management/restaurant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"restaurant-management",
+								"restaurant"
+							]
+						},
+						"description": "Create Dish, dish must have a restaurant id\nIf want to update dish, then dishId must be set."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Menu",
+			"item": [
+				{
+					"name": "Get Menu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/restaurant-menu/menu?restaurantId=5ff72f8e7e430647b1724f2e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"restaurant-menu",
+								"menu"
+							],
+							"query": [
+								{
+									"key": "restaurantId",
+									"value": "5ff72f8e7e430647b1724f2e"
+								}
+							]
+						},
+						"description": "Get Menu, use get restaurant to get the restaurant ids, then use the restaurant id as parameter to get the menu of the restaurant"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
