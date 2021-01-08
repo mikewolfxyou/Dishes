@@ -27,7 +27,7 @@ docker build -t dishes -f docker/dishes.Dockerfile .
 docker-compose up
 ```
 3. Use browser open `localhost:5000/swagger` or use [Postman](https://www.postman.com/downloads/) import [Postman Collection](asset/MongoDBDishes.postman_collection.json) in asset folder
-4. First create a restaurant. After that query menu with the returned restaurant i,
-   but the dishes array is still empty
-5. Then create dish which belongs to the restaurant
+4. First create a restaurant. After that query menu with the returned restaurant id,
+   in this moment the dishes array is still empty
+5. Create dishes which belongs to the restaurant
 6. Then query menu with the restaurant id, the restaurant information and dishes information will be included. 
